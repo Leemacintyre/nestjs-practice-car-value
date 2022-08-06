@@ -1,0 +1,23 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make":"make",
+    "model":"model",
+    "year":1950,
+    "milage":10000,
+    "lng":0,
+    "lat":0,
+    "price":1234
+}
+
+### approve report
+PATCH http://localhost:3000/reports/15
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+###get estimate for existing vehicle
+GET http://localhost:3000/reports?make=make&model=model&lng=0&lat=0&milage=10000&year=1950

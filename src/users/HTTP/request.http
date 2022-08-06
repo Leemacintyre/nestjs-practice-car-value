@@ -1,0 +1,46 @@
+# create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "rrrrresrseee@rss.com",
+    "password": "test"
+}
+
+### sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "rrrrresrseee@rss.com",
+    "password": "test"
+}
+
+### currently signed in as
+GET http://localhost:3000/auth/whoami
+
+### sign out
+POST http://localhost:3000/auth/signout
+
+
+### GET USER BY ID
+GET http://localhost:3000/auth/1
+Content-Type: application/json
+
+### GET ALL USER BY EMAL
+GET http://localhost:3000/auth?email=resrsee@rss.com
+Content-Type: application/json
+
+
+### DELETE USER BY ID
+DELETE http://localhost:3000/auth/4
+Content-Type: application/json
+
+
+### DELETE USER BY ID
+PATCH  http://localhost:3000/auth/4
+Content-Type: application/json
+
+{
+    "email":"test2"
+}
